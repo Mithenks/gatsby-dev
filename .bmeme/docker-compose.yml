@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   app:
-    image: bmeme/gatsby-dev:2.18.0-node15-buster-slim
+    image: bmeme/gatsby-dev:2.19.1-14.15.5-buster-slim
     entrypoint: /bin/sleep infinity
     working_dir: /usr/src/app/
     volumes:
@@ -10,4 +10,4 @@ services:
       - 8000:8000
       - 9000:9000
     environment:
-      - DNSDOCK_ALIAS=gatsby-dev.bmeme.docker
+      - DNSDOCK_ALIAS=${PROJECT_NAME}.${PROJECT_VENDOR}.docker
