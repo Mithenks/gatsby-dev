@@ -22,7 +22,7 @@ $ ./gatsby new .
 Run your application
 
 ```bash
-$ ./gatsby develop
+$ ./gatsby develop --host=0.0.0.0
 ```
 
 ## Documentation
