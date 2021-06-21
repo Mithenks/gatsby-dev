@@ -1,0 +1,28 @@
+#!/bin/bash
+
+VENDOR=$1
+PROJECT=$2
+
+MYUID=$(id -u)
+MYGID=$(id -g)
+
+SP="-i''"
+if [[ $(uname) == "Darwin" ]]; then
+    SP="-i ''"
+fi
+
+if [ -z "${VENDOR}" ]; then
+    echo -n "Vendor (es: bmeme): "
+    read VENDOR
+fi
+
+if [ -z "${PROJECT}" ]; then
+    echo -n "Project name (es: myproject): "
+    read PROJECT
+fi
+
+eval sed ${SP} -e 's#@PROJECT_VENDOR@#'"${VENDOR}"'#g' .env
+eval sed ${SP} -e 's#@PROJECT_NAME@#'"${PROJECT}"'#g' .env
+
+eval sed ${SP} -e 's#@FIX_UID@#'"${MYUID}"'#g' .env
+eval sed ${SP} -e 's#@FIX_GID@#'"${MYGID}"'#g' .env
