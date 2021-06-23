@@ -17,6 +17,8 @@ Create and run the docker container:
 $ docker-compose up -d --build
 ```
 
+[![asciicast](https://asciinema.org/a/uvqGLywUoPjs40hghDdQ7xIVb.svg)](https://asciinema.org/a/uvqGLywUoPjs40hghDdQ7xIVb)
+
 Run the Gatsby CLI to create your project:
 
 ```bash
