@@ -26,3 +26,7 @@ eval sed ${SP} -e 's#@PROJECT_NAME@#'"${PROJECT}"'#g' .env
 
 eval sed ${SP} -e 's#@FIX_UID@#'"${MYUID}"'#g' .env
 eval sed ${SP} -e 's#@FIX_GID@#'"${MYGID}"'#g' .env
+
+echo "Configuration finished!"
+echo ""
+echo "Hint: docker-compose up -d --build"

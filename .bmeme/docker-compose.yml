@@ -10,6 +10,8 @@ services:
     working_dir: /usr/src/app/
     volumes:
       - "../app:/usr/src/app:cached"
+    ports:
+      - 8000
     environment:
       - DNSDOCK_ALIAS=${PROJECT_NAME}.${PROJECT_VENDOR}.docker
       - VIRTUAL_HOST=${PROJECT_NAME}.${PROJECT_VENDOR}.docker
